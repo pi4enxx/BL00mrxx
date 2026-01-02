@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>bl00mrx</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<!-- ENTER SCREEN -->
+<div id="enter-screen">
+  <div class="enter-text">click to enter</div>
+</div>
+
+<!-- VIDEO -->
+<video id="bg-video" loop playsinline>
+  <source src="assets/bg.mp4" type="video/mp4">
+</video>
+
+<!-- MAIN SECTION -->
+<section class="hero">
+  <div class="card hidden">
+    <img src="assets/avatar.jpg" class="avatar">
+    <h1>bl00mrx</h1>
+    <p>discord-free flp • ig beats</p>
+    <div class="links">
+      <a href="#"><img src="assets/discord.svg"></a>
+      <a href="#"><img src="assets/telegram.svg"></a>
+      <a href="#"><img src="assets/tiktok.svg"></a>
+      <a href="#"><img src="assets/instagram.svg"></a>
+    </div>
+  </div>
+  <div class="scroll-indicator">↓</div>
+</section>
+
+<!-- BEATS SECTION -->
+<section class="beats-section">
+  <div class="beats-title">BEATS</div>
+  
+  <!-- БИТЫ ПОЯВЛЯЮТСЯ АВТОМАТИЧЕСКИ -->
+  <div class="beats-container" id="beats-container">
+    <!-- Сюда JS добавит биты автоматически -->
+    <div class="loading">Loading beats...</div>
+  </div>
+</section>
+
+<!-- АУДИОПЛЕЕР -->
+<div class="audio-player" style="display: none;">
+  <div class="player-content">
+    <div class="current-beat">
+      <div class="beat-icon-small">
+        <i class="fas fa-music"></i>
+      </div>
+      <div class="beat-info">
+        <div class="beat-name-playing" id="now-playing">Select a beat</div>
+        <div class="beat-artist">bl00mrx</div>
+      </div>
+    </div>
+    
+    <div class="player-controls">
+      <button class="player-btn" id="prev-btn">
+        <i class="fas fa-step-backward"></i>
+      </button>
+      <button class="player-btn" id="play-pause-btn">
+        <i class="fas fa-play"></i>
+      </button>
+      <button class="player-btn" id="next-btn">
+        <i class="fas fa-step-forward"></i>
+      </button>
+    </div>
+    
+    <div class="player-progress">
+      <div class="progress-bar" id="progress-bar">
+        <div class="progress-fill" id="progress-fill"></div>
+      </div>
+      <div class="time-display">
+        <span class="current-time" id="current-time">0:00</span>
+        <span class="total-time" id="total-time">0:00</span>
+      </div>
+    </div>
+    
+    <div class="volume-control">
+      <i class="fas fa-volume-up volume-icon"></i>
+      <input type="range" class="volume-slider" id="volume-slider" min="0" max="100" value="80">
+    </div>
+    
+    <button class="close-player" id="close-player">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+</div>
+
+<!-- АУДИО ЭЛЕМЕНТ -->
+<audio id="audio-player"></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
